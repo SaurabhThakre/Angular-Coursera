@@ -7,10 +7,9 @@ import { Dish } from '../shared/dish';
   styleUrls: ['./menu.component.scss']
 })
 
-
 export class MenuComponent implements OnInit {
 
-  dishes: Dish[] = [
+  DISHES: Dish[] = [
     {
       id: '0',
       name: 'Uthappizza',
@@ -54,8 +53,13 @@ export class MenuComponent implements OnInit {
     }
   ];
 
+  dishes = this.DISHES;
+
+  selectedDish = this.DISHES[0];
+
   constructor() { }
 
   ngOnInit() {
+
   }
 }
